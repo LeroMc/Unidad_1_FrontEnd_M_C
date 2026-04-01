@@ -2,7 +2,7 @@
 body {
     background-color: #b1c0c8; /* Fondo gris muy claro [cite: 28, 69] */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna [cite: 39] */
-    color: #000000;
+    color: #301010;
     margin: 0 ;
     line-height: 1.5;
     display: flex;
@@ -24,21 +24,21 @@ header {
 }
 
 h1 {
-    color: #675e5e; /* Azul oscuro profesional [cite: 29] */
+    color: #000000; /* Azul oscuro profesional [cite: 29] */
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #e4e4e4;
     margin: 0 15px;
     font-weight: 600;
     transition: color 0.3s; /* Animación suave */
 }
 
 nav a:hover {
-    color: #030f1b; /* Cambio a azul al pasar el mouse */
+    color: #1177dc; /* Cambio a azul al pasar el mouse */
 }
 
 /* 4. Sección Principal (Tarjeta Moderna) */
@@ -51,7 +51,7 @@ section {
 }
 
 h2 {
-    color: #007bff;
+    color: #000810;
     margin-top: 0;
 }
 
