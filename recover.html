@@ -1,0 +1,40 @@
+
+<DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="css/CSSrecover.css">
+</head>
+<body>
+    <main> 
+        <h1>Recuperar Contraseña</h1>
+        <section>
+            <h3>Email:</h3>
+            <input type="text" id="email" name="email" required>
+            <nav>
+                <button id="sendLinkButton">Enviar Enlace de Recuperación</button>
+                <hr>
+            </nav>
+            <p id="recoverMessage" class="hidden">Se envió el enlace de recuperación al correo.</p>
+            <nav>
+                <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+                <span class="divisor">|</span>
+                <a href="registro.html">Registrarse</a>
+            </nav>
+        </section>
+        <footer>
+        <p>© 2026 Club Deportivo</p>
+    </footer>
+    <script>
+        var button = document.getElementById('sendLinkButton');
+        var message = document.getElementById('recoverMessage');
+        button.onclick = function() {
+            message.classList.remove('hidden');
+            setTimeout(function() {
+                message.classList.add('hidden');
+            }, 4000);
+        };
+    </script>
+</body>
+</html>

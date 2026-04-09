@@ -1,0 +1,85 @@
+body{
+    background-color: rgb(158, 88, 216);
+    font-family: example, Helvetica, sans-serif;
+    color: #000000;
+    padding: 110px;
+    text-align: center;
+
+}
+main{
+    background-color: rgb(214, 196, 113);
+    border-radius: 5px;
+    padding: 20px;
+    width: 530px;
+    margin: 0 auto;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    text-align: left;
+}
+hr{
+    margin-top: 0px;
+    border-color: #000000;
+    margin-bottom: 15px;
+    width: 80%;
+}
+h3{
+    text-align: ce;   
+    margin-bottom: 1.5px; 
+    margin-left: 0px;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    border-radius: 10px;
+    padding: 5px;
+    width: 98.5%;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+}
+input[type="number"]{
+    border-radius: 10px;
+    padding: 5px;
+    width: 20%;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+}
+input[type="radio"]{
+    margin-top: 5px;
+}
+button{
+    padding: 8px;
+    border-radius: 10px;
+    width: 38%;
+    min-width: 20px;
+    text-align: center;
+    margin: 19px
+}
+button:hover{
+    background-color: rgb(229, 210, 210);
+}
+input:hover{
+    background-color: rgb(238, 234, 234);
+}
+nav{
+    text-align: center;
+}
+nav a{
+       color: black;
+       font-size: 16px;
+}
+nav a:hover{
+    color:blue;
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
