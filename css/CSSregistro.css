@@ -10,6 +10,8 @@ main{
     background-color: rgb(214, 196, 113);
     border-radius: 5px;
     padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
     width: 530px;
     margin: 0 auto;
     border-color: black;
