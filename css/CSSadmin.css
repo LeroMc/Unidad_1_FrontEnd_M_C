@@ -1,0 +1,178 @@
+body {
+    background-color: rgb(158, 88, 216); 
+    font-family: example, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(214, 196, 113); 
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.barramenus {
+    background-color: rgb(214, 196, 113);
+    display: flex;
+    justify-content: space-between; 
+    padding: 5px 40px;
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.menus {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menus a {
+    text-decoration: underline;
+    color: #292323;
+    font-weight: bold;
+}
+
+.botonesusuario {
+    display: flex;
+    gap: 20px;
+}
+
+.botonesusuario button {
+    padding: 7px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+
+.botonesusuario button:hover {
+    background-color: rgb(229, 210, 210);
+}
+
+h1 {
+    text-align: Left;
+    margin: 20px 0;
+    margin-left: 50px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+.CajaPrincipal {
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    align-items: flex-start;
+}
+
+.gestion-usuarios {
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 520px; 
+    width: 25%; 
+}
+
+.informacion-usuario {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px; 
+    background-color: rgb(214, 196, 113); 
+    margin-bottom: 10px;
+}
+
+.datos-usuario {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+.informacion-usuario button, .horario-clase button, .item-clase button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 7px 15px;
+    font-size: 14px;
+}
+
+.informacion-usuario button:hover, .horario-clase button:hover {
+    background-color: rgb(229, 210, 210);
+}
+
+.columna-derecha {
+    display: flex;;
+    gap: 30px;
+    width: 68%;
+    min-height: 572px;
+    gap: 30px;
+}
+
+.control-clase, .cuadro-gimnasio, .info-general {
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    flex: 1;
+    min-height: 100px;
+}
+button:hover{
+    background-color: rgb(229, 210, 210);
+}
+.control-clase button{
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 7px 15px;
+    font-size: 14px;
+}
+.control-clase button:hover{
+    background-color: rgb(229, 210, 210);
+}
+
+.control-clase p, .item-clase {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black; 
+    padding-bottom: 5px;
+}
+
+.caja-bienvenida {
+    border-left: 10px solid rgb(214, 196, 113);
+    border-radius: 10px;
+    margin: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30%;
+}
+
+.caja-bienvenida h1 {
+    margin: 0;
+    margin-left: 50px; 
+    text-align: left; 
+    color: #000000;
+}
+
+.caja-bienvenida hr {
+    margin-top: 0px;
+    border-color: #000000;
+    margin-bottom: 10px;
+    width: 82%;
+}
+
+.caja-bienvenida p {
+    margin-left: 50px;
+    text-align: left;
+    color: #000000;
+    margin-top: 10px;
+    font-size: 18px;
+}

@@ -7,16 +7,17 @@ body{
     text-align: center;
 }
 main {
-    background-color:rgb(214, 196, 113);
+    background-color: rgb(214 196 113);
     border-radius: 5px;
     padding: 24px;
-    width: 530px;
+    width: 425px;
     margin: auto;
     min-height: 570px;
     text-align: center;
     border-color: black;
     border-width: 3px;
     border-style: solid;
+    border-radius: 30px;
 }
 hr{
     margin-top: 20px;
@@ -47,9 +48,12 @@ input:hover{
 
 button{
     padding: 8px;
-    border-radius: 10px;
-    width: 30%;
+    border-radius: 20px;
+    width: 36%;
     margin-top: 19px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #251144;
 }
 button:hover{
     background-color: rgb(229, 210, 210);

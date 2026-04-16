@@ -8,7 +8,7 @@ body{
 }
 main{
     background-color: rgb(214, 196, 113);
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 20px;
     padding-left: 40px;
     padding-right: 40px;
@@ -33,6 +33,7 @@ h3{
 h1{
     text-align: center;
     font-size: 35px;
+    font-weight: 799;
 }
 
 input[type="text"],
@@ -58,12 +59,15 @@ input[type="radio"]{
     margin-top: 5px;
 }
 button{
-    padding: 8px;
-    border-radius: 10px;
-    width: 38%;
-    min-width: 20px;
-    text-align: center;
-    margin: 19px
+   padding: 8px;
+    border-radius: 20px;
+    width: 36%;
+    margin-top: 19px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #251144;
+
 }
 button:hover{
     background-color: rgb(229, 210, 210);
