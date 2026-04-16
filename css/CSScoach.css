@@ -1,0 +1,159 @@
+body {
+    background-color: rgb(158, 88, 216); 
+    font-family: example, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(214, 196, 113); 
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.barramenus {
+    background-color: rgb(214, 196, 113);
+    display: flex;
+    justify-content: space-between; 
+    padding: 5px 40px;
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+.menus {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.menus a {
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+.botonesusuario {
+    display: flex;
+    gap: 20px;
+}
+.botonesusuario button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.botonesusuario button:hover {
+    background-color: rgb(229, 210, 210);
+}
+h1 {
+    text-align: Left;
+    margin: 20px 0;
+    margin-left: 50px;
+}
+hr {
+    border: 1px solid black;
+}
+.CajaPrincipal {
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    align-items: flex-start;
+}
+.alumnos {
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 490px;
+    width: 35%; 
+}
+.informacion-usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px; 
+    background-color: rgb(214, 196, 113); 
+    margin-bottom: 15px;
+}
+.informacion-usuario button {
+    margin-top: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1.5px solid black;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+.informacion-usuario button:hover {
+    background-color: rgb(229, 210, 210);
+}
+.columna-derecha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 63%;
+}
+.mihorario {
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    min-height: 250px;
+}
+.mihorario p {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid black; 
+    padding-bottom: 8px;
+}
+.mihorario button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+.mihorario button:hover {
+    background-color: rgb(229, 210, 210);
+}
+.imagen-perfil {
+    background-color: white;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+.datos-usuario {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+.caja-bienvenida{
+    border-left: 10px solid rgb(214, 196, 113);
+    border-radius: 10px;
+    margin: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 26%;
+    
+}
+.caja-bienvenida h1{
+    margin: 0;
+    margin-left: 88px;
+    text-align: left; 
+    color: #000000;
+}
+.caja-bienvenida hr{
+    margin-top: 0px;
+    border-color: #000000;
+    margin-bottom: 10px;
+    width: 64%;
+}
+.caja-bienvenida p{
+    margin-left: 88px;
+    text-align: left;
+    color: #000000;
+    margin-top: 10px;
+    font-size: 20px;
+} 

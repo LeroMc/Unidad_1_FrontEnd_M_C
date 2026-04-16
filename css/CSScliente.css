@@ -1,0 +1,170 @@
+body{
+    background-color: rgb(158, 88, 216);
+    font-family: example, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(214, 196, 113);
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    
+}
+
+.barramenus {
+    background-color: rgb(214, 196, 113);
+    display: flex;
+    justify-content: space-between; 
+    padding: 5px 40px;
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+.menus{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+.menus a{
+    text-decoration: underline;
+    color: #333;
+    font-weight: bold;
+}
+.botonesusuario{
+    display: flex;
+    gap: 20px;
+
+}
+.botonesusuario button{
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+}
+.botonesusuario button:hover{
+    background-color: rgb(229, 210, 210);
+}
+h1{
+    text-align: Left;
+    margin: 20px 0;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+hr{
+    border: 1px solid black;;
+}
+.CajaPrincipal{
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    align-items: flex-start;
+}
+.Perfil{
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 590px;
+    width: 30%;
+}
+.columna-derecha{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 68%;
+    min-height: 500px;
+}
+.progreso, .clases-disponibles, .horario-clase{
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+.progreso, .clases-disponibles{
+    flex: 1;
+}
+.contenedor-progreso{
+    display: flex;
+}
+.detalles-progreso{
+    border: 1.7px solid black;
+    border-radius: 15px;
+    padding: 18px;
+    margin-left: 20px;
+    text-align: center;
+}
+.item-clase{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000;
+}
+.imagen-perfil{
+    background-color: white;
+    display: block;
+    margin: 0;
+    border-radius: 10%;
+    border: 2px solid black;
+}
+.horario-clase {
+    width: 100%;
+    flex-grow: 1;
+}
+.informacion-usuario{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+.clases-disponibles, .horario-clase{
+    padding: 20px;
+}
+.horario-clase p {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000000; 
+    padding-bottom: 5px;
+}
+.horario-clase button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+.clases-disponibles button {
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #333;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+.clases-disponibles button:hover, .horario-clase button:hover {
+    background-color: rgb(229, 210, 210);
+}
+.caja-bienvenida{
+    border-left: 10px solid rgb(214, 196, 113);
+    border-radius: 10px;
+    margin: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 30%;
+}
+.caja-bienvenida h1{
+    margin: 0;
+    margin-left: 58px;
+    text-align: left; 
+    color: #000000;
+    text-decoration: underline;
+}
+.objetivos-personales{
+    font-size: 20px;
+}
