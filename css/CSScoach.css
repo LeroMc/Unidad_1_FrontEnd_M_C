@@ -62,8 +62,8 @@ hr {
     background-color: rgb(214, 196, 113);
     border: 2px solid black;
     border-radius: 15px;
-    padding: 25px;
-    min-height: 490px;
+    padding: 20px;
+    min-height: 290px;
     width: 35%; 
 }
 .informacion-usuario {
@@ -81,7 +81,7 @@ hr {
     border-radius: 8px;
     cursor: pointer;
     border: 1.5px solid black;
-    padding: 7px 15px;
+    padding: 5px 15px;
     font-size: 15px;
 }
 .informacion-usuario button:hover {
@@ -113,7 +113,7 @@ hr {
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid black;
-    padding: 7px 15px;
+    padding: 5px 15px;
     font-size: 15px;
 }
 .mihorario button:hover {
@@ -133,9 +133,9 @@ hr {
 .caja-bienvenida{
     border-left: 10px solid rgb(214, 196, 113);
     border-radius: 10px;
-    margin: 20px 40px;
+    margin: 10px 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    width: 26%;
+    width: 30%;
     
 }
 .caja-bienvenida h1{
