@@ -1,14 +1,14 @@
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/CSSlogin.css">
+    <title>Login Usuario</title>
+    <link rel="stylesheet" href="/css/CSSlogin.css">
 </head>
 <body>
     <main> 
-        <img src="logo1.png" alt="Logotipo de la empresa" style="
+        <img src="/imagenes/logo1.png" alt="Logotipo de la empresa" style="
         width: 399px;
         margin-top: 32px;">
         <h1>Login</h1>
@@ -18,20 +18,20 @@
             <h3>Contraseña:</h3>
             <input type="password" id="password" name="password" required>
             <nav>
-                
-                <a href="Cliente.html"><button>Ingresar</button></a>
-                
+                <button type="button" id="btnIngresar">Ingresar</button>      
+                <p id="mensajeError" style="color: red; font-weight: bold; margin-top: 10px;"></p>          
            <hr> </nav>
             <nav>
-                <a href="recover.html">¿Olvidaste tu contraseña?</a>
+                <a href="/html/recover.html">¿Olvidaste tu contraseña?</a>
                 <span class="divisor">|</span>
-                <a href="registro.html">Registrarse</a>
+                <a href="/html/registro.html">Registrarse</a>
             </nav>
         </section>
-    </main>    
         <footer>
         <p>© 2026 Club Deportivo</p>
     </footer>
+    </main>
+    <script src="/js/loginjs.JavaScript"></script>
 </body>
 </html>
 

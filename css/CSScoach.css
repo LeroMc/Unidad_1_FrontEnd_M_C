@@ -1,159 +1,153 @@
 body {
     background-color: rgb(158, 88, 216); 
-    font-family: example, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 header {
     background-color: rgb(214, 196, 113); 
     padding: 10px 40px;
     display: flex;
     gap: 30px;
     align-items: center;
+    border-bottom: 2px solid black;
 }
+
 .barramenus {
     background-color: rgb(214, 196, 113);
     display: flex;
     justify-content: space-between; 
-    padding: 5px 40px;
+    padding: 10px 40px;
     align-items: center;
     border-bottom: 2px solid black;
-    border-top: 2px solid black;
 }
+
 .menus {
     display: flex;
     gap: 30px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .menus a {
     text-decoration: underline;
     color: #333;
     font-weight: bold;
 }
+
 .botonesusuario {
     display: flex;
     gap: 20px;
 }
+
 .botonesusuario button {
     padding: 8px 15px;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid #333;
+    border: 1px solid black;
+    font-weight: bold;
 }
+
 .botonesusuario button:hover {
     background-color: rgb(229, 210, 210);
 }
-h1 {
-    text-align: Left;
-    margin: 20px 0;
-    margin-left: 50px;
+
+.caja-bienvenida {
+    border-left: 10px solid rgb(214, 196, 113);
+    border-radius: 10px;
+    margin: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    width: fit-content;
+    min-width: 300px;
 }
-hr {
+
+.caja-bienvenida h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.caja-bienvenida hr {
     border: 1px solid black;
+    margin: 10px 0;
 }
+
+.caja-bienvenida p {
+    font-size: 20px;
+    margin: 0;
+}
+
 .CajaPrincipal {
     display: flex;
     gap: 30px;
     padding: 20px 40px;
-    align-items: flex-start;
 }
+
 .alumnos {
     background-color: rgb(214, 196, 113);
     border: 2px solid black;
     border-radius: 15px;
     padding: 20px;
-    min-height: 290px;
-    width: 35%; 
+    width: 40%; 
 }
+
 .informacion-usuario {
     display: flex;
     align-items: center;
-    gap: 20px; 
+    gap: 15px; 
     border: 2px solid black;
     border-radius: 15px;
     padding: 10px; 
-    background-color: rgb(214, 196, 113); 
+    background-color:  rgb(214, 196, 113); 
     margin-bottom: 15px;
 }
-.informacion-usuario button {
-    margin-top: 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1.5px solid black;
-    padding: 5px 15px;
-    font-size: 15px;
-}
-.informacion-usuario button:hover {
-    background-color: rgb(229, 210, 210);
-}
-.columna-derecha {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 63%;
-}
-.mihorario {
-    background-color: rgb(214, 196, 113);
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 30px;
-    width: 100%;
-    min-height: 250px;
-}
-.mihorario p {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    margin-bottom: 15px;
-    border-bottom: 1px solid black; 
-    padding-bottom: 8px;
-}
-.mihorario button {
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid black;
-    padding: 5px 15px;
-    font-size: 15px;
-}
-.mihorario button:hover {
-    background-color: rgb(229, 210, 210);
-}
+
 .imagen-perfil {
+    border-radius: 10px;
+    border: 1px solid black;
     background-color: white;
-    border-radius: 10%;
-    border: 2px solid black;
 }
+
 .datos-usuario {
     display: flex;
     justify-content: space-between; 
     align-items: center;
     width: 100%;
 }
-.caja-bienvenida{
-    border-left: 10px solid rgb(214, 196, 113);
-    border-radius: 10px;
-    margin: 10px 40px;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 30%;
-    
+
+.datos-usuario button, .mihorario button {
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px 12px;
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
 }
-.caja-bienvenida h1{
+
+.datos-usuario button:hover, .mihorario button:hover {
+    background-color: rgb(158, 88, 216);
+    color: rgb(255, 255, 255);
+}
+
+.columna-derecha {
+    width: 60%;
+}
+
+.mihorario {
+    background-color: rgb(214, 196, 113);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.mihorario p {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black; 
     margin: 0;
-    margin-left: 88px;
-    text-align: left; 
-    color: #000000;
 }
-.caja-bienvenida hr{
-    margin-top: 0px;
-    border-color: #000000;
-    margin-bottom: 10px;
-    width: 64%;
-}
-.caja-bienvenida p{
-    margin-left: 88px;
-    text-align: left;
-    color: #000000;
-    margin-top: 10px;
-    font-size: 20px;
-} 

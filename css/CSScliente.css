@@ -68,7 +68,7 @@ hr{
     border: 2px solid black;
     border-radius: 15px;
     padding: 20px;
-    min-height: 590px;
+    min-height: 490px;
     width: 30%;
 }
 .columna-derecha{
@@ -76,13 +76,13 @@ hr{
     flex-wrap: wrap;
     gap: 20px;
     width: 68%;
-    min-height: 500px;
+    min-height: 150px;
 }
 .progreso, .clases-disponibles, .horario-clase{
     background-color: rgb(214, 196, 113);
     border: 2px solid black;
     border-radius: 15px;
-    padding: 20px;
+    padding: 12px;
 }
 .progreso, .clases-disponibles{
     flex: 1;
@@ -93,8 +93,8 @@ hr{
 .detalles-progreso{
     border: 1.7px solid black;
     border-radius: 15px;
-    padding: 18px;
-    margin-left: 20px;
+    padding: 15px;
+    margin-left: 40px;
     text-align: center;
 }
 .item-clase{
@@ -118,34 +118,35 @@ hr{
 .informacion-usuario{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     border: 2px solid black;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
 }
 .clases-disponibles, .horario-clase{
-    padding: 20px;
+    padding: 12px;
 }
 .horario-clase p {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #000000; 
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 }
 .horario-clase button {
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid #333;
-    padding: 7px 15px;
+    padding: 4px 15px;
     font-size: 15px;
+    margin-bottom: 5px;
 }
 .clases-disponibles button {
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid #333;
-    padding: 7px 15px;
+    padding: 4px 15px;
     font-size: 15px;
 }
 .clases-disponibles button:hover, .horario-clase button:hover {
@@ -154,7 +155,7 @@ hr{
 .caja-bienvenida{
     border-left: 10px solid rgb(214, 196, 113);
     border-radius: 10px;
-    margin: 20px 40px;
+    margin: 10px 40px;
     background-color: rgba(255, 255, 255, 0.2);
     width: 30%;
 }

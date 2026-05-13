@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Panel de Administración</title>
-    <link rel="stylesheet" href="css/CSSadmin.css">
+    <link rel="stylesheet" href="/css/CSSadmin.css">
+    <script>
+    const loggeduser = JSON.parse(localStorage.getItem("user"));
+    
+    if (!loggeduser) {
+        window.location.href = "/html/index.html";
+    }
+</script>
 </head>
 <body>
     <header>
-        <img src="logo1.png" style="width: 250px; height: auto;"> 
+        <img src="/imagenes/logo1.png" style="width: 250px; height: auto;"> 
         <h1>ADMINISTRACIÓN</h1>
     </header>
 
@@ -113,3 +120,15 @@
     </main>
 </body>
 </html>
+<script>
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    
+    if (loggedUser) {
+        const bienvenidaP = document.querySelector('.caja-bienvenida p');
+        if (bienvenidaP) {
+            bienvenidaP.textContent = "Bienvenido, " + loggedUser.name;
+        }
+    } else {
+        window.location.href = "index.html";
+    }
+</script>

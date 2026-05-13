@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(158, 88, 216);
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+header {
+    background-color: rgb(214, 196, 113);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+.logo-container img {
+    width: 200px;
+}
+
+.menus {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menus a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-nav {
+    padding: 8px 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: white;
+}
+
+.btn-nav.highlight {
+    background-color: rgb(158, 88, 216);
+    color: white;
+}
+
+.hero {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.boton-principal {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: rgb(214, 196, 113);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+.clases-destacadas {
+    padding: 50px;
+    background-color: white;
+}
+
+.grid-clases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-clase {
+    background-color: rgb(214, 196, 113);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(214, 196, 113);
+    border-top: 3px solid black;
+}

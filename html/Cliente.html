@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tu Perfil</title>
-    <link rel="stylesheet" href="css/CSScliente.css">
+    <link rel="stylesheet" href="/css/CSScliente.css">
 </head>
 <body>
     <header>
-        <img src="logo1.png" style="width: 250px;
+        <img src="/imagenes/logo1.png" style="width: 250px;
                                     height: auto;"> 
         <h1>TU PERFIL</h1>
     </header>
@@ -33,7 +33,7 @@
         <section class="Perfil">
             <h2>Mi Perfil</h2>
             <div class="informacion-usuario">
-                <img src="logousuario.webp" class="imagen-perfil" style="width: 100px;">
+                <img src="/imagenes/logousuario.webp" class="imagen-perfil" style="width: 100px;">
                 <div class="datos-usuario">
                     <h3>Información Personal</h3>
                         <p><strong>Nombre:</strong> .......</p>
@@ -56,7 +56,7 @@
     <section class="progreso">
         <h2>Progreso</h2>
         <div class="contenedor-progreso">
-                <img src="Imagen1.png" style="width: 120px;
+                <img src="/imagenes/Imagen1.png" style="width: 120px;
                                             height: 120px;">
             <div class="detalles-progreso">
                 <h2>Avance</h2>
@@ -95,7 +95,18 @@
     </main>
     </body>
 </html>
-
+<script>
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    
+    if (loggedUser) {
+        const bienvenidaP = document.querySelector('.caja-bienvenida p');
+        if (bienvenidaP) {
+            bienvenidaP.textContent = "Bienvenido, " + loggedUser.name;
+        }
+    } else {
+        window.location.href = "index.html";
+    }
+</script>
 
 
     

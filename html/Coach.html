@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Entrenador</title>
-    <link rel="stylesheet" href="css/CSScoach.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenador - SportClub</title>
+    <link rel="stylesheet" href="../css/CSScoach.css">
 </head>
 <body>
     <header>
-        <img src="logo1.png" style="width: 250px; 
-                                    height: auto;"> 
+        <img src="../imagenes/logo1.png" style="width: 250px; height: auto;" alt="Logo SportClub"> 
         <h1>DASHBOARD COACH</h1>
     </header>
+
     <nav class="barramenus">
         <ul class="menus">
             <li><a href="#">Inicio</a></li>
@@ -26,22 +27,26 @@
 
     <div class="caja-bienvenida">
         <h1>Panel de Entrenador</h1>
-        <hr></hr>
+        <hr>
         <p>Bienvenido, Entrenador</p>
     </div>
-    <hr></hr>
+
+    <hr>
+
     <main class="CajaPrincipal">
         <section class="alumnos">
             <h2>Mis Alumnos</h2>
+            
             <div class="informacion-usuario">
-                <img src="logousuario.webp" class="imagen-perfil" style="width: 80px;">
+                <img src="../imagenes/logousuario.webp" class="imagen-perfil" style="width: 80px;" alt="Avatar">
                 <div class="datos-usuario">
                     <p><strong>Nombre:</strong> Alumno 1</p>
                     <button>Ver Progreso</button>
                 </div>
             </div>
-            <div class="informacion-usuario" style="margin-bottom: 10px;">
-                <img src="logousuario.webp" class="imagen-perfil" style="width: 80px;">
+
+            <div class="informacion-usuario">
+                <img src="../imagenes/logousuario.webp" class="imagen-perfil" style="width: 80px;" alt="Avatar">
                 <div class="datos-usuario">
                     <p><strong>Nombre:</strong> Alumno 2</p>
                     <button>Ver Progreso</button>
@@ -49,7 +54,7 @@
             </div>
 
             <div class="informacion-usuario">
-                <img src="logousuario.webp" class="imagen-perfil" style="width: 80px;">
+                <img src="../imagenes/logousuario.webp" class="imagen-perfil" style="width: 80px;" alt="Avatar">
                 <div class="datos-usuario">
                     <p><strong>Nombre:</strong> Alumno 3</p>
                     <button>Ver Progreso</button>
@@ -57,15 +62,27 @@
             </div>
         </section>
 
-        <div class="columna-derecha">
+        <aside class="columna-derecha">
             <section class="mihorario">
                 <h2>Mi Horario</h2>
-                <p>Lunes / 14:00 - 18:00 / Spinning / <button>Ver Detalle</button></p>
-                <p>Martes / 11:00 - 15:00 / Natacion / <button>Ver Detalle</button></p> <p>Miércoles / 10:00 - 14:00 / CrossFit / <button>Ver Detalle</button></p>
-                <p>Viernes / 11:00 - 15:00 / Boxeo / <button>Ver Detalle</button></p>
+                <p>Lunes / 14:00 - 18:00 / Spinning <button>Ver Detalle</button></p>
+                <p>Martes / 11:00 - 15:00 / Natación <button>Ver Detalle</button></p> 
+                <p>Miércoles / 10:00 - 14:00 / CrossFit <button>Ver Detalle</button></p>
+                <p>Viernes / 11:00 - 15:00 / Boxeo <button>Ver Detalle</button></p>
             </section>
-        </div>
-
+        </aside>
     </main>
+
+    <script>
+        const loggedUser = JSON.parse(localStorage.getItem("user"));
+        if (loggedUser) {
+            const bienvenidaP = document.querySelector('.caja-bienvenida p');
+            if (bienvenidaP) {
+                bienvenidaP.textContent = "Bienvenido, " + loggedUser.name;
+            }
+        } else {
+            window.location.href = "login.html";
+        }
+    </script>
 </body>
 </html>
