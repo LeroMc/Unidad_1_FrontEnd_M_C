@@ -1,4 +1,6 @@
 
+//CON ESTO ES POSIBLE EL REGISTRAR UN USUARIO Y QUE ESTE SE GUARDE EN LA BASE DE DATOS,
+//ADEMAS DE MOSTRAR AVISOS DE ERRORES SEGUN LA SITUACION QUE SE PRESENTE
 document.getElementById('btnRegistrar').addEventListener('click', async () => {
     const full_name = document.getElementById('full_name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -11,8 +13,6 @@ document.getElementById('btnRegistrar').addEventListener('click', async () => {
     const mensajeError = document.getElementById('mensajeError');
 
     mensajeError.textContent = "";
-
-
     if (!full_name || !email || !password || !confirm_password) {
         mensajeError.textContent = "Todos los campos marcados son obligatorios.";
         return;
@@ -26,18 +26,15 @@ document.getElementById('btnRegistrar').addEventListener('click', async () => {
         mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres.";
         return;
     }
-
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])/;
     if (!passwordRegex.test(password)) {
         mensajeError.textContent = "La contraseña debe contener letras y números.";
         return;
     }
-
     if (password !== confirm_password) {
         mensajeError.textContent = "Las contraseñas no coinciden.";
         return;
     }
-
     const userData = {
         full_name: full_name,
         email: email,
@@ -50,16 +47,13 @@ document.getElementById('btnRegistrar').addEventListener('click', async () => {
             nivel_experiencia: nivel_experiencia
         }
     };
-
     try {
         const response = await fetch('http://localhost:3000/api/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
         });
-
         const result = await response.json();
-
         if (response.ok) {
             alert("Registro completado con éxito! Ahora puedes iniciar sesión.");
             window.location.href = "login.html";

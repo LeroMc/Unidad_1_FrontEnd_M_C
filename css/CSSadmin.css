@@ -75,7 +75,7 @@ hr {
     border: 2px solid black;
     border-radius: 15px;
     padding: 25px;
-    min-height: 520px; 
+    min-height: 50px; 
     width: 25%; 
 }
 
@@ -179,4 +179,20 @@ button:hover{
     color: #000000;
     margin-top: 10px;
     font-size: 18px;
+}
+
+.gestion a{
+    text-decoration: none;
+    color: black;border: 1px solid;
+    border-radius: 10px; 
+    font-size: 14px;cursor: pointer; 
+    padding: 10px 70px; 
+    background-color: white; 
+    width: 500px; 
+    margin-left: 28px;
+}
+
+.gestion a:hover{
+    background-color: rgb(158, 88, 216);
+    color: white;
 }

@@ -1,0 +1,203 @@
+:root {
+    --morado: rgb(158, 88, 216);
+    --dorado: rgb(214, 196, 113);
+}
+
+body {
+    background-color: rgb(158, 88, 216);
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--dorado);
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+}
+
+.contenedor-perfil {
+    display: flex;
+    padding: 30px;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar Estilo SportClub */
+.perfil-sidebar {
+    width: 250px;
+    background: #f9faf8;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.foto-seccion img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    border: 4px solid var(--morado);
+    margin-bottom: 15px;
+}
+
+.info-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+    max-width: 240px;
+}
+
+.info-icon {
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.info-copy {
+    text-align: left;
+}
+
+.info-label {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.info-value {
+    display: block;
+    color: #5c5c6c;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Formulario */
+.perfil-main { 
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; }
+
+.caja-blanca {
+    background: #f9faf8;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.grid-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.campo-full { grid-column: 1 / -1; }
+
+label { 
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 5px; }
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+.campo-full textarea {
+    height: 30px;
+    resize: vertical;
+    width: 95.3%;
+}
+
+.btn-guardar {
+    background: var(--morado);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-guardar:hover {
+    background-color: rgb(214, 196, 113)    ;
+    color: white;
+}
+
+.btn-actualizar-pass {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 23px;
+}
+.btn-volver {
+    background-color: white;
+    border: 2px solid black;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-volver:hover{
+    background-color: rgb(158, 88, 216);
+    color: white;
+}
+.btn-editar-perfil{
+    margin-left: 720px;
+    background-color: rgb(244, 218, 102);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.btn-editar-perfil:hover{
+    background-color: rgb(158, 88, 216);
+    color: white;
+}
+.badge.admin { background-color: #dc3545; } 
+.badge.coach { background-color: #007bff; } 
+.badge.user { background-color: #28a745; }  
+
+.badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input.invalid {
+    border: 2px solid red !important;
+}
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 2px;
+    display: block;
+}
+.header-caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}

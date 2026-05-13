@@ -1,0 +1,189 @@
+
+:root {
+    --morado: rgb(158, 88, 216);
+    --dorado: rgb(214, 196, 113);
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+body {
+    background-color: var(--morado);
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+header {
+    background-color: var(--dorado);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--negro);
+}
+.btn-volver {
+    background-color: white;
+    border: 2px solid var(--negro);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search-input-sketch{
+    padding: 5px;
+    border-radius: 3px;
+    border: 0.8px solid var(--negro);
+}
+.btn-volver:hover{
+    background-color: rgb(158, 88, 216);
+    color: white;
+}
+.filter-select-sketch{
+    border-radius: 3px;
+    padding: 5px;
+}
+.btn-nuevo-sketch{
+    border-radius: 3px;
+    background-color: rgb(124, 245, 124);
+    cursor: pointer;
+    padding: 5px;
+}
+.btn-nuevo-sketch:hover{
+    background-color: rgb(158, 88, 216);
+    color: white;
+}
+.main-content-unified {
+    background-color: #fafbff;
+    margin: 25px auto;
+    width: 92%;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 25px;
+}
+.content-header-sketch {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--morado);
+    padding-bottom: 10px;
+}
+.table-sketch {
+    width: 100%;
+    margin-top: 15px;
+    border: 2px solid var(--negro);
+    border-collapse: collapse;
+}
+
+.table-sketch th {
+    background-color: var(--dorado);
+    padding: 12px;
+    border: 1px solid var(--negro);
+}
+
+.table-sketch td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.hidden { display: none; }
+.form-desplegable-sketch {
+    margin-top: 15px;
+    padding: 15px 15px 15px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: #fafbff;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    max-width: 814px;
+    margin: 0 0px;
+    margin-top: 25px;
+}
+.form-desplegable-sketch .form-header h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: var(--morado);
+}
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 300px));
+    gap: 5px;
+    align-items: start;
+    justify-content: start;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    max-width: 300px;
+}
+.input-group label {
+    font-weight: 700;
+    color: #212121;
+    font-size: 14px;
+}
+.input-group input,
+.input-group select {
+    width: 70%;
+    min-height: 15px;
+    padding: 15px 10px;
+    border: 1px solid #d6d6dc;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #1f1f1f;
+}
+.input-group input::placeholder {
+    color: #9a9aab;
+}
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--morado);
+    box-shadow: 0 0 0 4px rgba(158, 88, 216, 0.12);
+}
+.form-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 18px;
+}
+.btn-cancelar-sketch {
+    background-color: #f5f5f8;
+    color: #222;
+    border: 1px solid #c7c7d1;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-cancelar-sketch:hover {
+    background-color: #ebebf1;
+}
+.btn-guardar-sketch {
+    background-color: var(--morado);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(158, 88, 216, 0.18);
+}
+.btn-edit-sketch, .btn-delete-sketch {
+    padding: 8px;
+    margin: 0 4px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-edit-sketch:hover { background-color: var(--dorado); }
+.btn-delete-sketch:hover { background-color: #ff4d4d; color: white; }
+.btn-guardar-sketch:hover {
+    background-color: rgb(136, 68, 186);
+}
+.error-msg { color: red; font-size: 12px; display: block; min-height: 15px; }
+input.invalid { border: 2px solid red; }
+.badge { padding: 5px 10px; border-radius: 5px; color: white; font-weight: bold; text-transform: uppercase; font-size: 10px; }
+.admin { background-color: var(--morado); }
+.coach { background-color: #007bff; }
+.user { background-color: #28a745; }
