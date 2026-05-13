@@ -46,7 +46,8 @@ header{
     border: 1px solid #333;
 }
 .botonesusuario button:hover{
-    background-color: rgb(229, 210, 210);
+    background-color: rgb(158, 88, 216);
+    color: white;
 }
 h1{
     text-align: Left;
@@ -150,7 +151,8 @@ hr{
     font-size: 15px;
 }
 .clases-disponibles button:hover, .horario-clase button:hover {
-    background-color: rgb(229, 210, 210);
+    background-color: rgb(158, 88, 216);
+    color: white;
 }
 .caja-bienvenida{
     border-left: 10px solid rgb(214, 196, 113);

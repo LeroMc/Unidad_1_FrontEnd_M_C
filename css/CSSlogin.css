@@ -51,12 +51,13 @@ button{
     border-radius: 20px;
     width: 36%;
     margin-top: 19px;
-    font-weight: 900;
+    font-weight: 750;
     font-size: 18px;
     color: #251144;
 }
 button:hover{
-    background-color: rgb(229, 210, 210);
+    background-color: rgb(158, 88, 216);
+    color: white;
 }
 section{
     margin-top: 50px;

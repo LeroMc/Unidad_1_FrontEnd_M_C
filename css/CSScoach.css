@@ -52,8 +52,8 @@ header {
 }
 
 .botonesusuario button:hover {
-    background-color: rgb(229, 210, 210);
-}
+    background-color: rgb(158, 88, 216);
+    color: white;}
 
 .caja-bienvenida {
     border-left: 10px solid rgb(214, 196, 113);
@@ -128,8 +128,8 @@ header {
 }
 
 .datos-usuario button:hover, .mihorario button:hover {
-    background-color: rgb(158, 88, 216);
-    color: rgb(255, 255, 255);
+     background-color: rgb(158, 88, 216);
+    color: white;
 }
 
 .columna-derecha {

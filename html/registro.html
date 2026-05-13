@@ -2,68 +2,86 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
-    <link rel="stylesheet" href="/css/CSSregistro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - SportClub</title>
+    <link rel="stylesheet" href="../css/CSSregistro.css">
 </head>
 <body>
-    <main> 
-        <h1>Registro para Nuevo Usuario</h1>
-        <section1>
-            <h3>Nombre:</h3>
-                <input type="text" id="nombre" name="nombre">
-            <h3>Apellido:</h3>
-                <input type="text" id="apellido" name="apellido">
-            <h3>Edad:</h3>
-                <input type="number" id="edad" name="edad">
-            <h3>Género:</h3>
-                <input type="radio"
-                id="genero1" name="genero" value="masculino">
-                <label for="genero1">Masculino</label>
-                <input type="radio" id="genero2" name="genero" value="femenino">
-                <label for="genero2">Femenino</label>
-                <input type="radio" id="genero3" name="genero" value="otro">
-                <label for="genero3">Prefiero no especificar</label>
-                <h3>¿Practica algun deporte?</h3>
-                <input type=radio id="deporte1" name="deporte" value="si">
-                <label for="deporte1">Sí</label>    
-                <input type=radio id="deporte2" name="deporte" value="no">
-                <label for="deporte2">No</label>
-            <h3>Nivel de Experiencia</h3>
-                <input type= radio id="nivel1" name="nivel" value="principiante">
-                <label for="nivel1">Principiante</label>
-                <input type= radio id="nivel2" name="nivel" value="intermedio">
-                <label for="nivel2">Intermedio</label>
-                <input type= radio id="nivel3" name="nivel" value="avanzado">
-                <label for="nivel3">Avanzado</label>
-                <h3>Objetivo Profesional</h3>
-                <input type="text" id="objetivo" name="objetivo">
-            <h3>Numero de Teléfono:</h3>
-                <input type="text" id="telefono" name="telefono">
-            <h3>Email:</h3>
-                <input type="text" id="email" name="email" required>
-            <h3>Contraseña:</h3>
-                <input type="password" id="password" name="password" required>
-        </section1>
-        <nav>
-                <button>Registrarse</button>
-                <hr>
-        </nav>
-            <nav>
-                <a href="/html/login.html">¿Ya tienes cuenta? Inicia sesión</a>
-            </nav>   
-        <footer>
-        <p>© 2026 Club Deportivo</p>
-        </footer>
+    <header>
+        <img src="../imagenes/logo1.png" class="logo" alt="Logo SportClub">
+        <h1>REGISTRO DE USUARIO</h1>
+    </header>
 
+    <main class="ContenedorCentrado">
+        <div class="SeccionFormulario">
+            <form id="registroForm">
+                <h2>Crea tu cuenta</h2>
+                
+                <div class="input-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="full_name" placeholder="Tu nombre y apellido" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label>Fecha de Nacimiento</label>
+                        <input type="date" id="birth_date">
+                    </div>
+                    <div class="input-group">
+                        <label>Género</label>
+                        <select id="gender">
+                            <option value="">Seleccionar...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group-row">
+                    <div class="input-group">
+                        <label>¿Practica Deporte?</label>
+                        <select id="practica_deporte">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Nivel de Experiencia</label>
+                        <select id="nivel_experiencia">
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <input type="password" id="password" placeholder="Mínimo 8 caracteres" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Repetir Contraseña</label>
+                    <input type="password" id="confirm_password" placeholder="Confirma tu contraseña" required>
+                </div>
+
+                <p id="mensajeError" class="error-text"></p>
+
+                <div class="botones">
+                    <button type="button" id="btnRegistrar" class="boton-registro">REGISTRARSE</button>
+                    <a href="login.html" class="link-volver">Volver al inicio</a>
+                    <a href="recover.html" class="link-volver">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
     </main>
 
-
-
-
-
-
-
-
-
-
+    <script src="../js/registro.js"></script>
+</body>
 </html>

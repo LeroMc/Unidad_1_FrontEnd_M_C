@@ -101,11 +101,16 @@
     if (loggedUser) {
         const bienvenidaP = document.querySelector('.caja-bienvenida p');
         if (bienvenidaP) {
-            bienvenidaP.textContent = "Bienvenido, " + loggedUser.name;
+            bienvenidaP.textContent = "Bienvenido, " + loggedUser.full_name;
         }
     } else {
-        window.location.href = "index.html";
+        window.location.href = "/html/login.html";
     }
+    document.querySelector('.botonsalir').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = "/html/login.html";
+        });
 </script>
 
 
