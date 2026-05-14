@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 //ESTA FUNCION ES PARA QUE CUANDO TOQUE EL BOTON DE VOLVER SE REDIRECCIONE A LA PAGINA CORRESPONDIENTE SEGUN EL ROL DEL USUARIO
     btnVolver.addEventListener('click', () => {
         const rol = u.role.toLowerCase();
-        if (rol === 'admin') window.location.href = 'Admin.html';
-        else if (rol === 'coach') window.location.href = 'Coach.html';
-        else window.location.href = 'Cliente.html';
+        if (rol === 'admin') window.location.href = '../html/Admin.html';
+        else if (rol === 'coach') window.location.href = '../html/Coach.html';
+        else window.location.href = '../html/Cliente.html';
     });
 }); 
