@@ -18,7 +18,7 @@ header {
     align-items: center;
     border-bottom: 3px solid var(--negro);
 }
-.btn-volver {
+.btn_volver {
     background-color: white;
     border: 2px solid var(--negro);
     padding: 8px 15px;
@@ -26,30 +26,30 @@ header {
     font-weight: bold;
     cursor: pointer;
 }
-.search-input-sketch{
+.buscador{
     padding: 5px;
     border-radius: 3px;
     border: 0.8px solid var(--negro);
 }
-.btn-volver:hover{
+.btn_volver:hover{
     background-color: rgb(158, 88, 216);
     color: white;
 }
-.filter-select-sketch{
+.filtro_seleccion{
     border-radius: 3px;
     padding: 5px;
 }
-.btn-nuevo-sketch{
+.botonNuevo{
     border-radius: 3px;
     background-color: rgb(124, 245, 124);
     cursor: pointer;
     padding: 5px;
 }
-.btn-nuevo-sketch:hover{
+.botonNuevo:hover{
     background-color: rgb(158, 88, 216);
     color: white;
 }
-.main-content-unified {
+.caja_principal {
     background-color: #fafbff;
     margin: 25px auto;
     width: 92%;
@@ -57,33 +57,35 @@ header {
     border-radius: 15px;
     padding: 25px;
 }
-.content-header-sketch {
+.diseñoenfrente {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid var(--morado);
     padding-bottom: 10px;
 }
-.table-sketch {
+.tablagestion {
     width: 100%;
     margin-top: 15px;
     border: 2px solid var(--negro);
     border-collapse: collapse;
 }
 
-.table-sketch th {
+.tablagestion th {
     background-color: var(--dorado);
     padding: 12px;
     border: 1px solid var(--negro);
 }
 
-.table-sketch td {
+.tablagestion td {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
 }
 
-.hidden { display: none; }
-.form-desplegable-sketch {
+.hidden { 
+    display: none; 
+}
+.despliegue_oculto{
     margin-top: 15px;
     padding: 15px 15px 15px;
     border: 2px solid rgb(0, 0, 0);
@@ -94,32 +96,32 @@ header {
     margin: 0 0px;
     margin-top: 25px;
 }
-.form-desplegable-sketch .form-header h3 {
+.despliegue_oculto .formaenfrente h3 {
     margin: 0 0 10px;
     font-size: 22px;
     color: var(--morado);
 }
-.grid-form {
+.formaCuadro {
     display: grid;
     grid-template-columns: repeat(3, minmax(220px, 300px));
     gap: 5px;
     align-items: start;
     justify-content: start;
 }
-.input-group {
+.consultasGrupo {
     display: flex;
     flex-direction: column;
     gap: 2px;
     width: 100%;
     max-width: 300px;
 }
-.input-group label {
+.consultasGrupo label {
     font-weight: 700;
     color: #212121;
     font-size: 14px;
 }
-.input-group input,
-.input-group select {
+.consultasGrupo input,
+.consultasGrupo select {
     width: 70%;
     min-height: 15px;
     padding: 15px 10px;
@@ -129,23 +131,23 @@ header {
     font-size: 14px;
     color: #1f1f1f;
 }
-.input-group input::placeholder {
+.consultasGrupo input::placeholder {
     color: #9a9aab;
 }
-.input-group input:focus,
-.input-group select:focus {
+.consultasGrupo input:focus,
+.consultasGrupo select:focus {
     outline: none;
     border-color: var(--morado);
     box-shadow: 0 0 0 4px rgba(158, 88, 216, 0.12);
 }
-.form-buttons {
+.btns_accion {
     grid-column: 1 / -1;
     display: flex;
     justify-content: flex-end;
     gap: 25px;
     margin-top: 18px;
 }
-.btn-cancelar-sketch {
+.btn_cancelar {
     background-color: #f5f5f8;
     color: #222;
     border: 1px solid #c7c7d1;
@@ -153,10 +155,10 @@ header {
     border-radius: 8px;
     cursor: pointer;
 }
-.btn-cancelar-sketch:hover {
+.btn_cancelar:hover {
     background-color: #ebebf1;
 }
-.btn-guardar-sketch {
+.btn_guardar {
     background-color: var(--morado);
     color: white;
     border: none;
@@ -166,7 +168,7 @@ header {
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(158, 88, 216, 0.18);
 }
-.btn-edit-sketch, .btn-delete-sketch {
+.btn_editarLogo, .btn_borrarLogo {
     padding: 8px;
     margin: 0 4px;
     border-radius: 5px;
@@ -176,12 +178,12 @@ header {
     transition: 0.2s;
 }
 
-.btn-edit-sketch:hover { background-color: var(--dorado); }
-.btn-delete-sketch:hover { background-color: #ff4d4d; color: white; }
-.btn-guardar-sketch:hover {
+.btn_editarLogo:hover { background-color: var(--dorado); }
+.btn_borrarLogo:hover { background-color: #ff4d4d; color: white; }
+.btn_guardar:hover {
     background-color: rgb(136, 68, 186);
 }
-.error-msg { color: red; font-size: 12px; display: block; min-height: 15px; }
+.msg_error { color: red; font-size: 12px; display: block; min-height: 15px; }
 input.invalid { border: 2px solid red; }
 .badge { padding: 5px 10px; border-radius: 5px; color: white; font-weight: bold; text-transform: uppercase; font-size: 10px; }
 .admin { background-color: var(--morado); }

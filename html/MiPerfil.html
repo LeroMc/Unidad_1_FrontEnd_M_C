@@ -9,98 +9,98 @@
     <header>
         <img src="../imagenes/logo1.png"style="width: 300px; height: 80px;" class="logo" alt="Logo">
         <h1>MI PERFIL</h1>
-        <button class="btn-volver" id="btnVolver">⬅ Volver</button>
+        <button class="btn_volver" id="btnVolver">⬅ Volver</button>
     </header>
 
-    <main class="contenedor-perfil">
-        <aside class="perfil-sidebar">
-            <div class="foto-seccion">
+    <main class="conten_Perfil">
+        <aside class="perfilBarra">
+            <div class="fotoUser">
                 <img src="../imagenes/logousuario.webp" alt="Usuario" id="profilePic">
-                <h2 id="sideName">Nombre Usuario</h2>
-                <span class="badge" id="sideRole">User</span>
+                <h2 id="NombrePerfil">Nombre Usuario</h2>
+                <span class="badge" id="RolPerfil">User</span>
             </div>
-            <div class="info-lista">
-                <div class="info-item">
-                    <span class="info-icon">📧</span>
-                    <div class="info-copy">
-                        <span class="info-label">Email</span>
-                        <span class="info-value" id="sideEmail">---</span>
+            <div class="TablaPerfil">
+                <div class="objetoInfo">
+                    <span class="Icono">📧</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Email</span>
+                        <span class="info_valor" id="EmailBarra">---</span>
                     </div>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">🎂</span>
-                    <div class="info-copy">
-                        <span class="info-label">Fecha de nacimiento</span>
-                        <span class="info-value" id="sideBirth">---</span>
+                <div class="objetoInfo">
+                    <span class="Icono">🎂</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Fecha de nacimiento</span>
+                        <span class="info_valor" id="CumpleBarra">---</span>
                     </div>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">🛡️</span>
-                    <div class="info-copy">
-                        <span class="info-label">Rol</span>
-                        <span class="info-value">User</span>
+                <div class="objetoInfo">
+                    <span class="Icono">🛡️</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Rol</span>
+                        <span class="info_valor">User</span>
                     </div>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">📅</span>
-                    <div class="info-copy">
-                        <span class="info-label">Registro</span>
-                        <span class="info-value" id="sideRegister">---</span>
+                <div class="objetoInfo">
+                    <span class="Icono">📅</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Registro</span>
+                        <span class="info_valor" id="FechaRegBarra">---</span>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <section class="perfil-main">
-            <div class="caja-blanca">
-                <div class="header-caja">
-    <button type="button" id="btnHabilitarEdicion" class="btn-editar-perfil">✏️ Editar Perfil</button>
+        <section class="perfil_main">
+            <div class="caja_blanca">
+                <div class="frente_caja">
+    <button type="button" id="btnHabilitarEdicion" class="btn_EditarPerfil">✏️ Editar Perfil</button>
 </div>
                 <h3>Información Personal</h3>
-                <form id="formInfoPersonal" class="grid-perfil">
+                <form id="infoPersonal" class="cuadro_Perfil">
                     <div class="campo">
                         <label>Nombre Completo</label>
-                        <input type="text" id="editName">
+                        <input type="text" id="editarNombre">
                     </div>
                     <div class="campo">
                         <label>Email</label>
-                        <input type="email" id="editEmail">
+                        <input type="email" id="editarEmail">
                     </div>
                     <div class="campo">
                         <label>Fecha de Nacimiento</label>
-                        <input type="date" id="editBirth">
+                        <input type="date" id="editarCumple">
                     </div>
                     <div class="campo">
                         <label>Deporte Favorito</label>
-                        <input type="text" id="editSport" placeholder="Ej: Fútbol, Natación...">
+                        <input type="text" id="editarDeporte" placeholder="Ej: Fútbol, Natación...">
                     </div>
-                    <div class="campo-full">
+                    <div class="campo_Bio">
                         <label>Intereses / Biografía</label>
-                        <textarea id="editBio" rows="3" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+                        <textarea id="editarBio" rows="3" placeholder="Cuéntanos un poco sobre ti..."></textarea>
                     </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-guardar" id="btnGuardarInfo">Guardar Cambios</button>
+                    <div class="accionGuardar">
+                        <button type="button" class="btn_guardar" id="btnGuardarInfo">Guardar Cambios</button>
                     </div>
                 </form>
             </div>
 
-            <div class="caja-blanca">
+            <div class="caja_blanca">
                 <h3>Seguridad / Cambiar Contraseña</h3>
-                <form id="formPass" class="grid-perfil">
+                <form id="FormularioEnter" class="cuadro_Perfil">
                     <div class="campo">
                         <label>Contraseña Actual</label>
-                        <input type="password" id="oldPass" placeholder="********">
+                        <input type="password" id="viejaContrasena" placeholder="********">
                     </div>
                     <div class="campo">
                         <label>Nueva Contraseña</label>
-                        <input type="password" id="newPass" placeholder="Mínimo 8 caracteres">
+                        <input type="password" id="nuevaContrasena" placeholder="Mínimo 8 caracteres">
                     </div>
                     <div class="campo">
                         <label>Confirmar Nueva Contraseña</label>
-                        <input type="password" id="confirmNewPass" placeholder="Repetir nueva">
+                        <input type="password" id="confirmar_nuevaContrasena" placeholder="Repetir nueva">
                     </div>
-                    <div class="form-actions">
-                        <button type="button" class="btn-actualizar-pass" id="btnUpdatePass">Actualizar Contraseña</button>
+                    <div class="accionGuardar">
+                        <button type="button" class="btn_act_Contrasena" id="btnActualizarContra">Actualizar Contraseña</button>
                     </div>
                 </form>
             </div>

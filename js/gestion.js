@@ -3,13 +3,13 @@ let idUsuarioAEditar = null;
 //ESTO SIRVE PARA TODO LO BASICO DEL CRUD
 document.addEventListener('DOMContentLoaded', () => {
     cargarUsuarios();
-    const btnDesplegar = document.getElementById('btnDesplegarNuevo');
+    const btnDesplegar = document.getElementById('btnDespliegue');
     const seccionForm = document.getElementById('seccionNuevoUsuario');
     const btnCancelar = document.getElementById('btnCancelar');
     const btnGuardar = document.getElementById('btnGuardar');
-    const form = document.getElementById('formRegistroAdmin');
-    const inputBusqueda = document.querySelector('.search-input-sketch');
-    const selectRol = document.querySelector('.filter-select-sketch');
+    const form = document.getElementById('registroAdmin');
+    const inputBusqueda = document.querySelector('.buscador');
+    const selectRol = document.querySelector('.filtro_seleccion');
 //SIRVE PARA DESPLEQUEGAR EL FORMULARIO DE CREACION DE USUARIOS NUEVOS EN LA SECCION DE GESTION
     btnDesplegar.addEventListener('click', () => {
         idUsuarioAEditar = null; 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnGuardar.style.backgroundColor = "var(--morado)";
         btnGuardar.style.color = "white";
 
-        document.querySelectorAll('.error-msg').forEach(span => span.textContent = "");
+        document.querySelectorAll('.msg_error').forEach(span => span.textContent = "");
         document.querySelectorAll('input').forEach(input => input.classList.remove('invalid'));
     });
         inputBusqueda.addEventListener('input', aplicarFiltros);
@@ -61,8 +61,8 @@ async function cargarUsuarios() {
                         <td><span class="badge ${u.role}">${u.role}</span></td>
                         <td>${fechaFormateada}</td>
                         <td>
-                            <button class="btn-edit-sketch" onclick="prepararEdicion(${u.id})" style="border-radius: 3px; border: 1px solid rgb(0, 0, 0);">✏️</button>
-                            <button class="btn-delete-sketch" onclick="eliminarUsuario(${u.id})" style="border-radius: 3px; border: 1px solid rgb(0, 0, 0);">🗑️</button>
+                            <button class="btn_editarLogo" onclick="prepararEdicion(${u.id})" style="border-radius: 3px; border: 1px solid rgb(0, 0, 0);">✏️</button>
+                            <button class="btn_borrarLogo" onclick="eliminarUsuario(${u.id})" style="border-radius: 3px; border: 1px solid rgb(0, 0, 0);">🗑️</button>
                         </td>
                     </tr>
                 `;
@@ -96,13 +96,13 @@ async function eliminarUsuario(id) {
 
 //ESTO SIRVE PARA GUARDAR USUARIOS NUEVOS O EDITAR LOS QUE UNO QUIERE
 document.getElementById('btnGuardar').addEventListener('click', async () => {
-    const name = document.getElementById('reg_name');
+    const name = document.getElementById('reg_nombre');
     const email = document.getElementById('reg_email');
-    const role = document.getElementById('reg_role').value; 
-    const pass = document.getElementById('reg_pass');
-    const confirmPass = document.getElementById('reg_confirm_pass');
+    const role = document.getElementById('reg_rol').value; 
+    const pass = document.getElementById('reg_contraseña');
+    const confirmPass = document.getElementById('reg_contraseña_buena');
 
-    document.querySelectorAll('.error-msg').forEach(span => span.textContent = "");
+    document.querySelectorAll('.msg_error').forEach(span => span.textContent = "");
     document.querySelectorAll('input').forEach(input => input.classList.remove('invalid'));
 
     let isValid = true;
@@ -113,12 +113,12 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
     }
     if (!idUsuarioAEditar || pass.value.length > 0) {
         if (pass.value.length < 8) {
-            document.getElementById('err-pass').textContent = "Mínimo 8 caracteres";
+            document.getElementById('error_contraseña').textContent = "Mínimo 8 caracteres";
             pass.classList.add('invalid');
             isValid = false;
         }
         if (pass.value !== confirmPass.value) {
-            document.getElementById('err-confirm-pass').textContent = "Las contraseñas no coinciden";
+            document.getElementById('erro_contraseña_buena').textContent = "Las contraseñas no coinciden";
             confirmPass.classList.add('invalid');
             isValid = false;
         }
@@ -147,7 +147,7 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
             alert(idUsuarioAEditar ? "¡Usuario actualizado con éxito!" : "¡Usuario creado con éxito!");
             idUsuarioAEditar = null; 
 
-            document.getElementById('formRegistroAdmin').reset();
+            document.getElementById('registroAdmin').reset();
             document.getElementById('seccionNuevoUsuario').classList.add('hidden');
             
             const btn = document.getElementById('btnGuardar');
@@ -158,7 +158,7 @@ document.getElementById('btnGuardar').addEventListener('click', async () => {
             cargarUsuarios(); 
         } else {
             const data = await resp.json();
-            document.getElementById('err-email').textContent = data.message || "Error en la operación";
+            document.getElementById('error_email').textContent = data.message || "Error en la operación";
         }
     } catch (err) {
         console.error("Error en la conexión:", err);
@@ -176,9 +176,9 @@ async function prepararEdicion(id) {
         if (resp.ok) {
             const u = result.data;
             
-            document.getElementById('reg_name').value = u.full_name;
+            document.getElementById('reg_nombre').value = u.full_name;
             document.getElementById('reg_email').value = u.email;
-            document.getElementById('reg_role').value = u.role;
+            document.getElementById('reg_rol').value = u.role;
             
             idUsuarioAEditar = id; 
             const seccionForm = document.getElementById('seccionNuevoUsuario');
@@ -196,8 +196,8 @@ async function prepararEdicion(id) {
 
 //FUNCION PARA FILTRAR LOS USUARIOS EN EL BUSCADOR DE LA TABLA DE GESTION
 function aplicarFiltros() {
-    const textoBusqueda = document.querySelector('.search-input-sketch').value.toLowerCase();
-    const rolFiltro = document.querySelector('.filter-select-sketch').value.toLowerCase();
+    const textoBusqueda = document.querySelector('.buscador').value.toLowerCase();
+    const rolFiltro = document.querySelector('.filtro_seleccion').value.toLowerCase();
     const filas = document.querySelectorAll('#cuerpoTabla tr');
     filas.forEach(fila => {
         const nombre = fila.querySelector('td:nth-child(2)').textContent.toLowerCase();
@@ -209,5 +209,5 @@ function aplicarFiltros() {
         } else {
             fila.style.display = "none";
         }
-    });
-}
+    })
+};

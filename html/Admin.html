@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Panel de Administración</title>
-    <link rel="stylesheet" href="/css/CSSadmin.css">
+    <link rel="stylesheet" href="../css/CSSadmin.css">
     <script>
     const loggeduser = JSON.parse(localStorage.getItem("user"));
     
     if (!loggeduser) {
-        window.location.href = "/html/index.html";
+        window.location.href = "../html/index.html";
     }
 </script>
 </head>
 <body>
     <header>
-        <img src="/imagenes/logo1.png" style="width: 250px; height: auto;"> 
+        <img src="../imagenes/logo1.png" style="width: 250px; height: auto;"> 
         <h1>ADMINISTRACIÓN</h1>
     </header>
 
@@ -27,7 +27,7 @@
         </ul>
         <div class="botonesusuario">
             <nav>
-            <a href="/html/MiPerfil.html"><button class="botonperfil">Editar Información</button></a>
+            <a href="../html/MiPerfil.html"><button class="botonperfil">Editar Información</button></a>
             </nav>
             <button class="botonsalir">Cerrar Sesión</button>
         </div>
@@ -46,7 +46,7 @@
             <div class="informacion-usuario">
                 <div class="datos-usuario">
             <nav class="gestion"> 
-                <a href="GestionUsuariosAdmin.html"style=" "> Gestionar Usuarios</a>
+                <a href="../html/GestionUsuariosAdmin.html"style=" "> Gestionar Usuarios</a>
             </nav>
         </section>
 
@@ -105,11 +105,11 @@
             bienvenidaP.textContent = "Bienvenido, " + loggedUser.full_name;
         }
     } else {
-        window.location.href = "/html/login.html";
+        window.location.href = "../html/login.html";
     }
     document.querySelector('.botonsalir').addEventListener('click', () => {
             localStorage.removeItem('token');
             localStorage.removeItem('user');
-            window.location.href = "/html/login.html";
+            window.location.href = "../html/login.html";
         });
 </script>

@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const btnEditar = document.getElementById('btnHabilitarEdicion');
     const btnGuardar = document.getElementById('btnGuardarInfo');
-    const inputsInfo = document.querySelectorAll('#formInfoPersonal input, #formInfoPersonal textarea');
+    const inputsInfo = document.querySelectorAll('#infoPersonal input, #infoPersonal textarea');
     const btnVolver = document.getElementById('btnVolver');
-    const btnUpdatePass = document.getElementById('btnUpdatePass');
+    const btnActualizarContra = document.getElementById('btnActualizarContra');
     inputsInfo.forEach(input => input.disabled = true);
     if(btnGuardar) btnGuardar.style.display = 'none';
 
@@ -24,28 +24,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     function llenarDatos(usuario) {
     const nombreCap = usuario.full_name.split(' ').map(w => w[0].toUpperCase() + w.substring(1).toLowerCase()).join(' ');
 
-    document.getElementById('sideName').textContent = nombreCap;
-    document.getElementById('sideEmail').textContent = usuario.email.toLowerCase();
-    document.getElementById('sideRole').textContent = usuario.role.toUpperCase();
+    document.getElementById('NombrePerfil').textContent = nombreCap;
+    document.getElementById('EmailBarra').textContent = usuario.email.toLowerCase();
+    document.getElementById('RolPerfil').textContent = usuario.role.toUpperCase();
     
-    const badge = document.getElementById('sideRole');
+    const badge = document.getElementById('RolPerfil');
     badge.className = `badge ${usuario.role}`;
     const fReg = usuario.created_at || usuario.createdAt;
-    document.getElementById('sideRegister').textContent = fReg ? new Date(fReg).toLocaleDateString('es-ES') : '---';
+    document.getElementById('FechaRegBarra').textContent = fReg ? new Date(fReg).toLocaleDateString('es-ES') : '---';
     const fNac = usuario.birth_date || usuario.birthdate;
-    document.getElementById('sideBirth').textContent = fNac ? new Date(fNac).toLocaleDateString('es-ES') : '---';
-    document.getElementById('editName').value = usuario.full_name;
-    document.getElementById('editEmail').value = usuario.email;
-    if(fNac) document.getElementById('editBirth').value = fNac.split('T')[0];
+    document.getElementById('CumpleBarra').textContent = fNac ? new Date(fNac).toLocaleDateString('es-ES') : '---';
+    document.getElementById('editarNombre').value = usuario.full_name;
+    document.getElementById('editarEmail').value = usuario.email;
+    if(fNac) document.getElementById('editarCumple').value = fNac.split('T')[0];
     if(usuario.metadata) {
         const deporteDB = usuario.metadata.practica_deporte || "";
         const bioDB = usuario.metadata.nivel_experiencia || "";
         const valoresRegistro = ["si", "no", "principiante", "intermedio", "avanzado"];
 
-        document.getElementById('editSport').value = valoresRegistro.includes(deporteDB.toLowerCase()) 
+        document.getElementById('editarDeporte').value = valoresRegistro.includes(deporteDB.toLowerCase()) 
             ? "" 
             : deporteDB;
-        document.getElementById('editBio').value = valoresRegistro.includes(bioDB.toLowerCase()) 
+        document.getElementById('editarBio').value = valoresRegistro.includes(bioDB.toLowerCase()) 
             ? "" 
             : bioDB;
     }
@@ -58,11 +58,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 //CON ESTA PARTE SE VAN A GUARDAR LOS CAMBIOS REALIZADOS EN LOS CAMPOS DEL PERFIL
     btnGuardar.addEventListener('click', async () => {
-        const name = document.getElementById('editName').value;
-        const email = document.getElementById('editEmail').value;
-        const birth = document.getElementById('editBirth').value;
-        const sport = document.getElementById('editSport').value;
-        const bio = document.getElementById('editBio').value;
+        const name = document.getElementById('editarNombre').value;
+        const email = document.getElementById('editarEmail').value;
+        const birth = document.getElementById('editarCumple').value;
+        const sport = document.getElementById('editarDeporte').value;
+        const bio = document.getElementById('editarBio').value;
         try {
             const resp = await fetch(`http://localhost:3000/api/users/${u.id}`, {
                 method: 'PUT',
@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     }
                 })
             });
-
             if (resp.ok) {
                 const result = await resp.json();
                 localStorage.setItem('user', JSON.stringify(result.data));
@@ -96,20 +95,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 //GRACIAS A ESTO SE PODRA CAMBIAR LA CONTRASEÑA Y MOSTRAR AVISOS DE ERROS SEGUN LA SITUACION QUE SE PRESENTE
-    if (btnUpdatePass) {
-        btnUpdatePass.addEventListener('click', async () => {
-            const oldPass = document.getElementById('oldPass').value;
-            const newPass = document.getElementById('newPass').value;
-            const confirm = document.getElementById('confirmNewPass').value;
-            if (!oldPass || !newPass || !confirm) {
+    if (btnActualizarContra) {
+        btnActualizarContra.addEventListener('click', async () => {
+            const viejaContrasena = document.getElementById('viejaContrasena').value;
+            const nuevaContrasena = document.getElementById('nuevaContrasena').value;
+            const confirm = document.getElementById('confirmar_nuevaContrasena').value;
+            if (!viejaContrasena || !nuevaContrasena || !confirm) {
                 alert("Completa todos los campos de contraseña.");
                 return;
             }
-            if (newPass.length < 8) {
+            if (nuevaContrasena.length < 8) {
                 alert("La nueva contraseña debe tener al menos 8 caracteres.");
                 return;
             }
-            if (newPass !== confirm) {
+            if (nuevaContrasena !== confirm) {
                 alert("Las contraseñas no coinciden.");
                 return;
             }
@@ -121,13 +120,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                         'Authorization': `Bearer ${token}` 
                     },
                     body: JSON.stringify({ 
-                        password: newPass,
-                        old_password: oldPass 
+                        password: nuevaContrasena,
+                        old_password: viejaContrasena 
                     })
                 });
                 if (resp.ok) {
                     alert("¡Contraseña actualizada correctamente en la base de datos!");
-                    document.getElementById('formPass').reset();
+                    document.getElementById('FormularioEnter').reset();
                 } else {
                     const data = await resp.json();
                     alert("Error: " + (data.message || "No se pudo cambiar la clave"));

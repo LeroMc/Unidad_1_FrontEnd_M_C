@@ -18,7 +18,7 @@ header {
     border-bottom: 3px solid black;
 }
 
-.contenedor-perfil {
+.conten_Perfil {
     display: flex;
     padding: 30px;
     gap: 25px;
@@ -27,7 +27,7 @@ header {
 }
 
 /* Sidebar Estilo SportClub */
-.perfil-sidebar {
+.perfilBarra {
     width: 250px;
     background: #f9faf8;
     border: 2px solid black;
@@ -37,7 +37,7 @@ header {
 
 }
 
-.foto-seccion img {
+.fotoUser img {
     width: 150px;
     height: 150px;
     border-radius: 10%;
@@ -45,7 +45,7 @@ header {
     margin-bottom: 15px;
 }
 
-.info-lista {
+.TablaPerfil {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,7 +53,7 @@ header {
     margin-top: 18px;
 }
 
-.info-item {
+.objetoInfo {
     display: flex;
     align-items: flex-start;
     gap: 14px;
@@ -61,17 +61,17 @@ header {
     max-width: 240px;
 }
 
-.info-icon {
+.Icono {
     font-size: 18px;
     line-height: 1;
     margin-top: 2px;
 }
 
-.info-copy {
+.info_copia {
     text-align: left;
 }
 
-.info-label {
+.info_campo {
     display: block;
     font-weight: 700;
     color: #333;
@@ -79,7 +79,7 @@ header {
     font-size: 14px;
 }
 
-.info-value {
+.info_valor {
     display: block;
     color: #5c5c6c;
     font-size: 14px;
@@ -87,26 +87,26 @@ header {
 }
 
 /* Formulario */
-.perfil-main { 
+.perfil_main { 
     flex: 1;
     display: flex;
     flex-direction: column; 
     gap: 20px; }
 
-.caja-blanca {
+.caja_blanca {
     background: #f9faf8;
     border: 2px solid black;
     border-radius: 15px;
     padding: 25px;
 }
 
-.grid-perfil {
+.cuadro_Perfil {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-.campo-full { grid-column: 1 / -1; }
+.campo_Bio { grid-column: 1 / -1; }
 
 label { 
     font-weight: bold; 
@@ -119,13 +119,13 @@ input, textarea {
     border: 2px solid #ccc;
     border-radius: 8px;
 }
-.campo-full textarea {
+.campo_Bio textarea {
     height: 30px;
     resize: vertical;
     width: 95.3%;
 }
 
-.btn-guardar {
+.btn_guardar {
     background: var(--morado);
     color: white;
     border: none;
@@ -134,12 +134,12 @@ input, textarea {
     cursor: pointer;
     font-weight: bold;
 }
-.btn-guardar:hover {
+.btn_guardar:hover {
     background-color: rgb(214, 196, 113)    ;
     color: white;
 }
 
-.btn-actualizar-pass {
+.btn_act_Contrasena {
     background: #28a745;
     color: white;
     border: none;
@@ -149,7 +149,7 @@ input, textarea {
     font-weight: bold;
     margin-top: 23px;
 }
-.btn-volver {
+.btn_volver {
     background-color: white;
     border: 2px solid black;
     padding: 8px 15px;
@@ -157,18 +157,18 @@ input, textarea {
     font-weight: bold;
     cursor: pointer;
 }
-.btn-volver:hover{
+.btn_volver:hover{
     background-color: rgb(158, 88, 216);
     color: white;
 }
-.btn-editar-perfil{
+.btn_EditarPerfil{
     margin-left: 720px;
     background-color: rgb(244, 218, 102);
     border: 2px solid black;
     border-radius: 5px;
     padding: 5px;
 }
-.btn-editar-perfil:hover{
+.btn_EditarPerfil:hover{
     background-color: rgb(158, 88, 216);
     color: white;
 }
@@ -189,13 +189,13 @@ input, textarea {
 input.invalid {
     border: 2px solid red !important;
 }
-.error-msg {
+.msg_error {
     color: red;
     font-size: 12px;
     margin-top: 2px;
     display: block;
 }
-.header-caja {
+.frente_caja {
     display: flex;
     justify-content: space-between;
     align-items: center;
