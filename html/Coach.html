@@ -20,7 +20,9 @@
             <li><a href="#">Reportes</a></li>
         </ul>
         <div class="botonesusuario">
-            <button class="botonperfil">Editar Perfil</button>
+            <nav>
+                <a href="/html/MiPerfil.html"><button class="botonperfil">Editar Perfil</button></a>
+            </nav>
             <button class="botonsalir">Cerrar Sesión</button>
         </div>
     </nav>    
@@ -78,11 +80,16 @@
         if (loggedUser) {
             const bienvenidaP = document.querySelector('.caja-bienvenida p');
             if (bienvenidaP) {
-                bienvenidaP.textContent = "Bienvenido, " + loggedUser.name;
+                bienvenidaP.textContent = "Bienvenido, " + loggedUser.full_name;
             }
         } else {
-            window.location.href = "login.html";
+            window.location.href = "/html/login.html";
         }
+        document.querySelector('.botonsalir').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = "/html/login.html";
+        });
     </script>
 </body>
 </html>

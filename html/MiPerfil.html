@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil - SportClub</title>
+    <link rel="stylesheet" href="../css/CSSPerfil.css">
+</head>
+<body>
+    <header>
+        <img src="../imagenes/logo1.png"style="width: 300px; height: 80px;" class="logo" alt="Logo">
+        <h1>MI PERFIL</h1>
+        <button class="btn_volver" id="btnVolver">⬅ Volver</button>
+    </header>
+
+    <main class="conten_Perfil">
+        <aside class="perfilBarra">
+            <div class="fotoUser">
+                <img src="../imagenes/logousuario.webp" alt="Usuario" id="profilePic">
+                <h2 id="NombrePerfil">Nombre Usuario</h2>
+                <span class="badge" id="RolPerfil">User</span>
+            </div>
+            <div class="TablaPerfil">
+                <div class="objetoInfo">
+                    <span class="Icono">📧</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Email</span>
+                        <span class="info_valor" id="EmailBarra">---</span>
+                    </div>
+                </div>
+                <div class="objetoInfo">
+                    <span class="Icono">🎂</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Fecha de nacimiento</span>
+                        <span class="info_valor" id="CumpleBarra">---</span>
+                    </div>
+                </div>
+                <div class="objetoInfo">
+                    <span class="Icono">🛡️</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Rol</span>
+                        <span class="info_valor">User</span>
+                    </div>
+                </div>
+                <div class="objetoInfo">
+                    <span class="Icono">📅</span>
+                    <div class="info_copia">
+                        <span class="info_campo">Registro</span>
+                        <span class="info_valor" id="FechaRegBarra">---</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="perfil_main">
+            <div class="caja_blanca">
+                <div class="frente_caja">
+    <button type="button" id="btnHabilitarEdicion" class="btn_EditarPerfil">✏️ Editar Perfil</button>
+</div>
+                <h3>Información Personal</h3>
+                <form id="infoPersonal" class="cuadro_Perfil">
+                    <div class="campo">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="editarNombre">
+                    </div>
+                    <div class="campo">
+                        <label>Email</label>
+                        <input type="email" id="editarEmail">
+                    </div>
+                    <div class="campo">
+                        <label>Fecha de Nacimiento</label>
+                        <input type="date" id="editarCumple">
+                    </div>
+                    <div class="campo">
+                        <label>Deporte Favorito</label>
+                        <input type="text" id="editarDeporte" placeholder="Ej: Fútbol, Natación...">
+                    </div>
+                    <div class="campo_Bio">
+                        <label>Intereses / Biografía</label>
+                        <textarea id="editarBio" rows="3" placeholder="Cuéntanos un poco sobre ti..."></textarea>
+                    </div>
+                    <div class="accionGuardar">
+                        <button type="button" class="btn_guardar" id="btnGuardarInfo">Guardar Cambios</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="caja_blanca">
+                <h3>Seguridad / Cambiar Contraseña</h3>
+                <form id="FormularioEnter" class="cuadro_Perfil">
+                    <div class="campo">
+                        <label>Contraseña Actual</label>
+                        <input type="password" id="viejaContrasena" placeholder="********">
+                    </div>
+                    <div class="campo">
+                        <label>Nueva Contraseña</label>
+                        <input type="password" id="nuevaContrasena" placeholder="Mínimo 8 caracteres">
+                    </div>
+                    <div class="campo">
+                        <label>Confirmar Nueva Contraseña</label>
+                        <input type="password" id="confirmar_nuevaContrasena" placeholder="Repetir nueva">
+                    </div>
+                    <div class="accionGuardar">
+                        <button type="button" class="btn_act_Contrasena" id="btnActualizarContra">Actualizar Contraseña</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Usuarios - SportClub</title>
+    <link rel="stylesheet" href="/css/CSSGestionUsuarios.css">
+</head>
+<body>
+    <header>
+        <img src="/imagenes/logo1.png" style="width: 350px; height: 100px;" class="logo" alt="Logo">
+        <h1>SISTEMA DE GESTIÓN DE USUARIOS</h1>
+        <button class="btn_volver" onclick="window.location.href='Admin.html'">⬅ Volver</button>
+    </header>
+
+    <main class="caja_principal">
+        <div class="diseñoenfrente">
+            <h2>Gestión de Usuarios</h2>
+            <div class="cajita">
+                <input type="text" placeholder="Buscar usuario..." class="buscador">
+                <select class="filtro_seleccion">
+                    <option>Filtrar por Rol</option>
+                    <option value="admin">Admin</option>
+                    <option value="coach">Coach</option>
+                    <option value="user">User</option>
+                </select>
+                <button class="botonNuevo" id="btnDespliegue"> + Nuevo Usuario</button>
+            </div>
+        </div>
+
+        <p class="Bienvenida">Administra los usuarios del sistema, cambia roles y gestiona permisos.</p>
+
+        <div class="conten">
+            <table class="tablagestion">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTabla">
+                    </tbody>
+            </table>
+        </div>
+
+        <section id="seccionNuevoUsuario" class="despliegue_oculto hidden">
+            <div class="formaenfrente">
+                <h3>➕ Registrar Nuevo Usuario</h3>
+            </div>
+            <form id="registroAdmin" class="formaCuadro">
+                <div class="consultasGrupo">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="reg_nombre" placeholder="Ej: Juan Pérez"style="border-radius: 4px;">
+                    <span class="msg_error" id="err-name"></span>
+                </div>
+                <div class="consultasGrupo">
+                    <label>Email</label>
+                    <input type="email" id="reg_email" placeholder="correo@sportclub.cl"style="border-radius: 4px;">
+                    <span class="msg_error" id="error_email"></span>
+                </div>
+                <div class="consultasGrupo">
+                    <label>Rol</label>
+                    <select id="reg_rol"style="border-radius: 4px;">
+                        <option value="user">User</option>
+                        <option value="coach">Coach</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="consultasGrupo">
+                    <label>Contraseña</label>
+                    <input type="password" id="reg_contraseña" placeholder="Mínimo 8 caracteres" style="border-radius: 4px;">
+                    <span class="msg_error" id="error_contraseña"></span>
+                </div>
+                <div class="consultasGrupo">
+                    <label>Confirmar Contraseña</label>
+                    <input type="password" id="reg_contraseña_buena" placeholder="Repetir contraseña" style="border-radius: 4px;">
+                    <span class="msg_error" id="erro_contraseña_buena"></span>
+                </div>
+                <div class="btns_accion">
+                    <button type="button" id="btnGuardar" class="btn_guardar">Guardar Usuario</button>
+                    <button type="button" id="btnCancelar" class="btn_cancelar" style="border-radius: 4px;">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/gestion.js"></script>
+</body>
+</html>
