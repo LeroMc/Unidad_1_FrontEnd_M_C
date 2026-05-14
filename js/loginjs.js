@@ -18,11 +18,11 @@ document.getElementById('btnIngresar').addEventListener('click', async () => {
             localStorage.setItem("user", JSON.stringify(result.data.user));
             const role = result.data.user.role;
             if (role === "admin") {
-                window.location.href = "/html/Admin.html";
+                window.location.href = "../html/Admin.html";
             } else if (role === "coach") {
-                window.location.href = "/html/Coach.html";
+                window.location.href = "../html/Coach.html";
             } else {
-                window.location.href = "/html/Cliente.html";
+                window.location.href = "../html/Cliente.html";
             }
         } else {
             mensajeError.textContent = result.message || "Credenciales incorrectas.";
